@@ -1,0 +1,7 @@
+[user]
+	email = george.tsafas@gmail.com
+	name = George Tsafas
+[push]
+	default = matching
+[core]
+	editor = /usr/bin/vim
