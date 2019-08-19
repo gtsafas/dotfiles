@@ -59,6 +59,7 @@ call plug#end()
 
 let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 1
+let g:gitgutter_enabled = 1
 map <C-n> :NERDTreeToggle<CR>
 map <C-o> :FZF<CR>
 map <C-b> :Buffers<CR>
