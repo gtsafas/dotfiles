@@ -52,7 +52,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'flazz/vim-colorschemes'
-
+Plug 'airblade/vim-gitgutter'
 
 
 call plug#end()
