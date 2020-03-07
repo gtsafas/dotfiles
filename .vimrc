@@ -4,6 +4,17 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Try to keep cursor always in middle
+augroup VCenterCursor
+  au!
+  au BufEnter,WinEnter,WinNew,VimResized *,*.*
+        \ let &scrolloff=winheight(win_getid())/2
+augroup END
+
+" Auto indent
+syntax on
+filetype indent plugin on
+
 
 " Indentation
 set tabstop=2       " The width of a TAB is set to 2.
@@ -53,7 +64,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'flazz/vim-colorschemes'
 Plug 'airblade/vim-gitgutter'
-
+Plug 'xolox/vim-colorscheme-switcher'
+Plug 'xolox/vim-misc'
 
 call plug#end()
 
@@ -65,4 +77,23 @@ map <C-o> :FZF<CR>
 map <C-b> :Buffers<CR>
 
 " Interface
-colorscheme jellybeans
+colorscheme jellyx
+
+" HARDMODE
+"
+nnoremap <Left> :echo "No left for you!"<CR>
+vnoremap <Left> :<C-u>echo "No left for you!"<CR>
+inoremap <Left> <C-o>:echo "No left for you!"<CR>
+
+nnoremap <Right> :echo "No left for you!"<CR>
+vnoremap <Right> :<C-u>echo "No left for you!"<CR>
+inoremap <Right> <C-o>:echo "No left for you!"<CR>
+
+nnoremap <Up> :echo "No left for you!"<CR>
+vnoremap <Up> :<C-u>echo "No left for you!"<CR>
+inoremap <Up> <C-o>:echo "No left for you!"<CR>
+
+nnoremap <Down> :echo "No left for you!"<CR>
+vnoremap <Down> :<C-u>echo "No left for you!"<CR>
+inoremap <Down> <C-o>:echo "No left for you!"<CR>
+
