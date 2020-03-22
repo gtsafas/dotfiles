@@ -14,6 +14,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'tomasr/molokai'
 Plug 'rakr/vim-one'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 
